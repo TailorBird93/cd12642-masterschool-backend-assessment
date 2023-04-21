@@ -17,6 +17,7 @@ const favoritesRoutes=require('./routes/favoritesRoutes')
 app.use(express.json());
 app.use('/api/photos', photoRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api/goals', require('./routes/goalRoutes'));
 app.use('/api/favorites', favoritesRoutes)
 
 
