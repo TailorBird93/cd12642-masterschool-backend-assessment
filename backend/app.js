@@ -11,16 +11,16 @@ connectDB();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-const photoRoutes = require('./routes/photoRoutes');
+// const photoRoutes = require('./routes/photoRoutes');
 const userRoutes= require('./routes/userRoutes');
-const favoritesRoutes=require('./routes/favoritesRoutes')
+// const favoritesRoutes=require('./routes/favoritesRoutes')
 const goalRoutes=require('./routes/goalRoutes')
 
 app.use(express.json());
-app.use('/api/photos', photoRoutes);
+// app.use('/api/photos', photoRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/goals', goalRoutes);
-app.use('/api/favorites', favoritesRoutes)
+// app.use('/api/favorites', favoritesRoutes)
 
 // Serve frontend
 
