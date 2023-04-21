@@ -9,7 +9,11 @@ const goalSchema = mongoose.Schema(
     },
     text: {
       type: String,
+<<<<<<< HEAD
       required: [true, 'Please add a text value'],
+=======
+      required: [true, 'Please add a goal'],
+>>>>>>> main
     },
   },
   {
@@ -17,4 +21,8 @@ const goalSchema = mongoose.Schema(
   }
 )
 
+<<<<<<< HEAD
 module.exports = mongoose.model('Goal', goalSchema)
+=======
+module.exports = mongoose.model('Goal', goalSchema)
+>>>>>>> main

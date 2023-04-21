@@ -93,10 +93,11 @@ h3 {
 }
 
 .goal {
-  background-color: #f4f4f4;
+  background-color: #858080;
   margin: 10px 0;
-  padding: 20px 0 10px;
+  padding: 20px;
   position: relative;
+  border-radius: 10px;
 }
 
 .goal .close {
@@ -107,6 +108,7 @@ h3 {
   border: none;
   background: none;
 }
+
 
 .form,
 .content {
@@ -167,6 +169,9 @@ h3 {
 
 .btn:hover {
   transform: scale(0.98);
+  background:#7a7a7a;
+  letter-spacing: 1px;
+  transition: all 1.35s;
 }
 
 .loadingSpinnerContainer {

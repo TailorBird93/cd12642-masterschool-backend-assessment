@@ -119,4 +119,8 @@ export const goalSlice = createSlice({
 })
 
 export const { reset } = goalSlice.actions
+<<<<<<< HEAD
 export default goalSlice.reducer
+=======
+export default goalSlice.reducer
+>>>>>>> main

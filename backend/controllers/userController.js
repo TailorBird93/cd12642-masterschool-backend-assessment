@@ -33,12 +33,88 @@ const registerUser = asyncHandler(async (req, res) => {
     password: hashedPassword,
   })
 
+<<<<<<< HEAD
   if (user) {
     res.status(201).json({
       _id: user.id,
       name: user.name,
       email: user.email,
       token: generateToken(user._id),
+=======
+        const createUser= await User.create({
+            name,
+            email,
+            password:hashedPassword,
+        })
+
+        if(createUser){
+            res.status(201).json({
+                _id:createUser.id,
+                name:createUser.name,
+                email:createUser.email,
+                token:generateToken(createUser._id)
+            })
+        } else {
+            res.status(400)
+            throw new Error('Invalid user data')
+        }
+    }
+)
+
+
+
+
+// Login user
+// POST request to /api/user/login
+
+const loginUser= asyncHandler(async(req, res) =>{
+    const {email, password}= req.body
+
+    const user=await User.findOne({email})
+
+    if (user && (await bcrypt.compare(password, user.password))){
+        res.json({
+            _id: user.id,
+            name:user.name,
+            email:user.email,
+            token: generateToken(user._id)
+        })
+    } else {
+        res.status(400)
+        throw new Error('Invalid login details.')
+    }
+})
+  
+
+// Logout user
+
+// const logOut = asyncHandler(async (req, res) => {
+//     try {
+//       res.status(200).json({ token: null });
+//     } catch (error) {
+//       console.error(error);
+//       res.status(500).json({ message: 'Server error' });
+//     }
+//   });
+
+
+
+// See logged in user
+// GET request to /api/user/me
+
+const getMe= asyncHandler(async(req, res) =>{
+    const {_id, name, email} = await User.findById(req.user.id)
+
+    res.status(200).json({id:_id, name, email})
+})
+
+
+// Generate JWT token 
+
+const generateToken = (id)=>{
+    return jwt.sign({ id }, process.env.JWT_SECRET, {
+        expiresIn:'30d'
+>>>>>>> main
     })
   } else {
     res.status(400)
