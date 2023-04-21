@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react'
-
->>>>>>> main
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { createGoal } from '../features/goals/goalSlice'
@@ -23,11 +18,7 @@ function GoalForm() {
     <section className='form'>
       <form onSubmit={onSubmit}>
         <div className='form-group'>
-<<<<<<< HEAD
-          <label htmlFor='text'>Goal</label>
-=======
           <label htmlFor='text'>Your next goal:</label>
->>>>>>> main
           <input
             type='text'
             name='text'
@@ -46,8 +37,4 @@ function GoalForm() {
   )
 }
 
-<<<<<<< HEAD
 export default GoalForm
-=======
-export default GoalForm
->>>>>>> main

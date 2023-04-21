@@ -45,7 +45,6 @@ function Dashboard() {
       <GoalForm />
 
       <section className='content'>
-<<<<<<< HEAD
         {goals.length > 0 ? (
           <div className='goals'>
             {goals.map((goal) => (
@@ -55,13 +54,6 @@ function Dashboard() {
         ) : (
           <h3>You have not set any goals</h3>
         )}
-=======
-        {goals.length>0 ? (<div className='goals'>
-          {goals.map((goal) => (
-            <GoalItem key={goal.id} goal={goal}/>
-          ))}
-        </div>):(<h2> You have no goals </h2>) }
->>>>>>> main
       </section>
     </>
   )

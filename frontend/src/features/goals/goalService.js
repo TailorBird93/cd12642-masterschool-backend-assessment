@@ -47,8 +47,4 @@ const goalService = {
   deleteGoal,
 }
 
-<<<<<<< HEAD
 export default goalService
-=======
-export default goalService
->>>>>>> main
