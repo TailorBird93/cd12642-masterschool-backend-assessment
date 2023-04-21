@@ -103,4 +103,4 @@ const generateToken = (id)=>{
 }
 
 
-module.exports={registerNewUser, loginUser, getMe, logOut }
+module.exports={registerNewUser, loginUser, getMe}
